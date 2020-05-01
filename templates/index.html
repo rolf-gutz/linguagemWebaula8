@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Minha primeira view</title>
+        <link rel="stylessheet" href="/static/style/styles.css">
+    </head>
+    <body>
+        <h1>Olá minha primeira view do flask</h1>
+            <p>Conteudo</p>
+            <p>{{titulo | upper}}</p>
+            <p>{{outro}}</p>
+            <ul>
+                {% for elemento in lista%}
+                {% if loop.first %}
+                <p>Primeiro loop</p>
+                {% endif %}
+                <li>Item {{loop.index0}}:{{elemento}}  </li>
+                  {% else %}
+                <li>Lista Vazia</li>
+                {% endfor %}
+            </ul>
+           
+        
+    </body>
+
+</html>
